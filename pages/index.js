@@ -1,25 +1,29 @@
-import Player from '../components/Player'
-import PlayerCSS from '../components/PlayerCss'
+import Player from "../components/Player";
+import PlayerCSS from "../components/PlayerCss";
+// components
+import Layout from "../components/Layout";
 
 const Index = () => {
   const videoJsOptions = {
-    techOrder: ['youtube'],
+    techOrder: ["youtube"],
     autoplay: false,
     controls: true,
     sources: [
       {
-        src: 'https://www.youtube.com/watch?v=IxQB14xVas0',
-        type: 'video/youtube',
-      },
-    ],
-  }
+        src: "https://www.youtube.com/watch?v=IxQB14xVas0",
+        type: "video/youtube"
+      }
+    ]
+  };
 
   return (
     <>
-      <Player {...videoJsOptions} />
-      <PlayerCSS />
+      <Layout>
+        <Player {...videoJsOptions} />
+        <PlayerCSS />
+      </Layout>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
