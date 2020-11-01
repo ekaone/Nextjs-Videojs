@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Box } from "@chakra-ui/core";
 // components
 import Header from "./Header";
@@ -11,7 +12,15 @@ function Layout(props) {
       <Header />
 
       <main>{children}</main>
-      <footer>Footer</footer>
+      <Box
+        as="footer"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        pt="40px"
+      >
+        <Link href="https://videojs.com/">Video JS</Link>
+      </Box>
     </Box>
   );
 }
